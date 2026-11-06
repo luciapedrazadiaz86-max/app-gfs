@@ -4,13 +4,11 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 st.set_page_config(layout='wide')
 
-# cargamos datos
-#file = Path.home() / 'Downloads' / 'gfs_data.nc'
-#ds = xr.open_dataset(file)
+
 
 @st.cache_resource
 def cargar():
-    return xr.open_dataset(Path.home() / 'Downloads' / 'gfs_data.nc')
+    return xr.open_dataset('gfs_data.nc')
 
 ds = cargar()
 
