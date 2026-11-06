@@ -8,7 +8,7 @@ st.set_page_config(layout='wide')
 
 @st.cache_resource
 def cargar():
-    return xr.open_dataset('gfs_data.nc')
+    return xr.open_dataset('gfs_recorte.nc')
 
 ds = cargar()
 
